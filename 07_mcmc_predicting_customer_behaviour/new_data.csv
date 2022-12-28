@@ -1,0 +1,15 @@
+,time,customer_id,location
+0,08:00,Wednesday_521,fruit
+1,08:00,Wednesday_622,drinks
+2,08:00,Tuesday_1302,dairy
+3,08:01,Wednesday_521,dairy
+4,08:01,Wednesday_622,dairy
+5,08:01,Monday_1026,fruit
+6,08:01,Wednesday_672,fruit
+7,08:01,Tuesday_620,spices
+8,08:02,Wednesday_622,checkout
+9,08:02,Wednesday_672,spices
+10,08:02,Tuesday_620,spices
+11,08:02,Friday_893,drinks
+12,08:02,Friday_738,drinks
+13,08:02,Friday_71,dairy

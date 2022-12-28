@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  mongo_con:
+    image: mongo
+    container_name: mongo_db
+    ports: 
+    - 27017:27017
+
+  tweet_collector:
+    build: tweet_collector
+    container_name: tweet_collector
+    # volumes: 
+    # - ./tweet_collector:/app
+    depends_on:
+    - mongo_con
+
+  postgresdb:
+    image: postgres
+    ports:
+    - 5555:5432
+    container_name: postgresdb
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=henda
+    - POSTGRES_DB=twitter
+  etl:
+    build: etl
+    container_name: etl
+    volumes: 
+      - ./etl:/app
+    depends_on:
+      - mongo_con
+      - postgresdb
