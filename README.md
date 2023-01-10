@@ -63,3 +63,15 @@ Image Detection
 ## 09_recommender_system
 
 The movie recommender is based on the Collaborative Filtering approach, and creates predictions for movie ratings with Matrix Factorization technique, more precisely, the SVD (Singular Value Decomposition) algorythm of the SurPRISE library. It is trained on 'small' dataset of MovieLens.
+
+## 10_flask_chatbot
+
+The goal of this project was to build a proof of concept: A web application that chat with a robot using deep learning, through the following steps:
+
+-	I downloaded a json dataset
+-	I used WorldNetLemmatizer() to create my corpus and clean the extracted texts. During the text pre-processing, word-tokenizer and word-lemmatizer of Natural Language Toolkit (NLTK) is used 
+-	I classifyed my data into 0’s and 1’s because neural networks work with numerical values
+-	I built and deployed a Sequential CNN model, that we’ll train on the dataset we prepared above using keras.Sequential()
+-	I wrote a flask web interface
+-	I connected our chatbot to flask using Flask, render_template, request
+
